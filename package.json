@@ -1,12 +1,11 @@
 {
-  "name": "wechat-h5-boilerplate",
-  "version": "0.3.6",
-  "description": "A fullpage scrolling website boilerplate for mobile devices.",
+  "name": "adb2019",
+  "version": "0.0.1",
+  "description": "adb2019",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/panteng/wechat-h5-boilerplate.git"
+    "type": "git"
   },
-  "author": "Chris Pan",
+  "author": "lzhbupt@163.com",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.10.1",

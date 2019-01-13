@@ -1,17 +1,64 @@
 .slide-2 {
-    background-color: #5cc2f1;
+    background-color: #000;
     .item-image {
-        width: 18rem;
-        height: 18rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
+        // margin: auto;
+        // background-image: url('../images/github-2.png');
+    }
+    .item-image-1 {
+        background-image: url('../images/02_pic_1.png');
+        position: absolute;
+        top: 2vw;
+        left: 2vw;
+        width: 71vw;
+        height: 69vw;
+    }
+    .item-image-2 {
+        background-image: url('../images/02_pic_2.png');
+        position: absolute;
+        top: 2vw;
+        right: 2vw;
+        width: 39vw;
+        height: 69vw;
+    }
+    .item-image-3 {
+        background-image: url('../images/02_pic_3.png');
+        position: absolute;
+        top: 73vw;
+        left: 2vw;
+        width: 96vw;
+        height: 96vw;
+    }
+    .item-image-cover {
+        opacity: .48;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../images/02_pic_cover.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .item-btn {
+        cursor: pointer;
+        background-image: url('../images/02_pic_btn.png');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        top: 4rem;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-image: url('../images/github-2.png');
+        bottom: 10vh;
+        left: 25vw;
+        width: 50vw;
+        height: 15vw;
     }
     .item-text {
         width: 18rem;

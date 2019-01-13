@@ -4,7 +4,6 @@
     // load dependencies
     var animationControl = require('./animation-control.js');
 
-
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
         var $btnMusic = $('.btn-music');
@@ -26,7 +25,7 @@
             mousewheelControl: true,
             effect: 'coverflow',    // slide, fade, coverflow or flip
             speed: 400,
-            direction: 'vertical',
+            direction: 'vertical',  // 'horizontal' or 'vertical' is OK
             fade: {
                 crossFade: false
             },
