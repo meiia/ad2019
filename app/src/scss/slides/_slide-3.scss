@@ -1,27 +1,77 @@
 .slide-3 {
-    background-color: #9993c1;
+    background-image: url('../images/03_bg.png');
     .item-image {
-        width: 18rem;
-        height: 18rem;
+        background-position-x: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
+        // background-image: url('../images/03_bg.png');
+    }
+    // .item-image-title {
+    //     background-image: url('../images/02_pic_2.png');
+    //     position: absolute;
+    //     top: 2vw;
+    //     right: 2vw;
+    //     width: 39vw;
+    //     height: 69vw;
+    // }
+    .item-btn {
+        cursor: pointer;
+        background-image: url('../images/03_btn.png');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        top: 4rem;
+        bottom: 10vh;
+        left: 25vw;
+        width: 50vw;
+        height: 15vw;
+    }
+    .item-btn {
+        background-image: url('../images/03_btn.png');
+    }
+    .item-cloud {
+        background-image: url('../images/03_cloud.png');
+        background-repeat: no-repeat;
+        width: 20vw;
+        height: 19vw;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+    .item-cloud-1 {
         left: 0;
+        top: 23vh;
+    }
+    .item-cloud-2 {
+        left: 0;
+        top: 68vh;
+    }
+    .item-cloud-3 {
         right: 0;
-        margin: auto;
-        background-image: url('../images/github-3.png');
+        top: 23vh;
+        transform: scaleX(-1);
+    }
+    .item-cloud-4 {
+        right: 0;
+        top: 68vh;
+        transform: scaleX(-1);
     }
     .item-text {
         width: 18rem;
         color: #fff;
-        font-size: 1.2rem;
-        font-weight: bold;
+        font-size: .6rem;
+        opacity: .75;
+        // font-weight: bold;
         position: absolute;
-        top: 24rem;
-        left: 0;
-        right: 0;
+        top: 10vw;
+        left: 17vw;
+        width: 70vw;
         margin: 0 auto;
         text-align: center;
     }

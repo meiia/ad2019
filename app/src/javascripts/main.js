@@ -8,6 +8,8 @@
         var bgMusic = $('audio').get(0);
         var $btnMusic = $('.btn-music');
         var $upArrow = $('.up-arrow');
+        var $enterJinjaBtn = $('#enterJinja');
+        var $enterForm = $('#enterForm');
 
         // background music control
         $btnMusic.click(function () {
@@ -21,7 +23,7 @@
         });
 
         // init Swiper
-        new Swiper('.swiper-container', {
+        var mySwiper = new Swiper('.swiper-container', {
             mousewheelControl: true,
             effect: 'coverflow',    // slide, fade, coverflow or flip
             speed: 400,
@@ -45,10 +47,11 @@
                 animationControl.playAnimation(swiper); // play animations of the first slide
             },
             onTransitionStart: function (swiper) {     // on the last slide, hide .btn-swipe
-                if (swiper.activeIndex === swiper.slides.length - 1) {
-                    $upArrow.hide();
-                } else {
+                // if (swiper.activeIndex === swiper.slides.length - 1) {
+                if (swiper.activeIndex === 0) {
                     $upArrow.show();
+                } else {
+                    $upArrow.hide();
                 }
             },
             onTransitionEnd: function (swiper) {       // play animations of the current slide
@@ -59,6 +62,16 @@
                     bgMusic.play();
                 }
             }
+        });
+
+        // enter jinja
+        $enterJinjaBtn.click(function () {
+            mySwiper.slideTo(3);
+        });
+
+        // enter form
+        $enterForm.click(function () {
+            mySwiper.slideTo(4);
         });
 
         // hide loading animation since everything is ready
