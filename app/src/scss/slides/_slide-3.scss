@@ -31,8 +31,15 @@
         width: 50vw;
         height: 15vw;
     }
-    .item-btn {
-        background-image: url('../images/03_btn.png');
+    .item-hands {
+        background-image: url('../images/03_hands.gif');
+        background-repeat: no-repeat;
+        // width: 20vw;
+        // height: 19vw;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
     }
     .item-cloud {
         background-image: url('../images/03_cloud.png');

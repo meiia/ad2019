@@ -3,6 +3,7 @@
 
     // load dependencies
     var animationControl = require('./animation-control.js');
+    var reposition = require('./reposition.js');
 
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
@@ -73,6 +74,47 @@
         $enterForm.click(function () {
             mySwiper.slideTo(4);
         });
+
+        // reposition when the window resized
+        var repostionHands = function () {
+            var pos = reposition({
+                iw: 549,
+                ih: 978,
+                ew: 681,
+                eh: 400,
+                ex: 42,
+                ey: 355
+            });
+            
+            $('.item-hands').css({
+                width: pos.w,
+                height: pos.h,
+                top: pos.y,
+                left: pos.x
+            });
+        }
+        repostionHands();
+        window.onresize = repostionHands;
+
+        // set the default age to 25
+        // $('#ageinput').click(function (e) {
+        //     e.preventDefault();
+        //     $('#ageinput').hide();
+        //     $('#ageselect_dummy').show();
+        //     $('#ageselect_dummy').click();
+        // });
+        var options = '';
+        for (var i = 1; i <= 100; i++) {
+            options += '<option value="' + i + '">' + i + '</option>';
+        }
+        $('#ageselect').html(options);
+        $('#ageselect').val('20');
+        // $('#ageselect').mobiscroll().select({
+        //     // theme: 'ios',
+        //     lang: 'zh',
+        //     display: 'bottom',
+        //     // minWidth: 200
+        // });
 
         // hide loading animation since everything is ready
         $('.loading-overlay').slideUp();

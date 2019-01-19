@@ -1,0 +1,63 @@
+.slide-4 {
+    background-image: url('../images/04_bg.png');
+    .item-image {
+        background-position-x: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .item-cloud {
+        background-image: url('../images/03_cloud.png');
+        background-repeat: no-repeat;
+        width: 20vw;
+        height: 19vw;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+    .item-cloud-1 {
+        left: 0;
+        top: 23vh;
+    }
+    .item-cloud-2 {
+        left: 0;
+        top: 68vh;
+    }
+    .item-cloud-3 {
+        right: 0;
+        top: 23vh;
+        transform: scaleX(-1);
+    }
+    .item-cloud-4 {
+        right: 0;
+        top: 68vh;
+        transform: scaleX(-1);
+    }
+    .item-form {
+        width: 195px;
+        height: 40px;
+        margin: 0 auto;
+        // margin-top: 
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            border: 3px solid #000;
+            border-radius: 8px;
+            padding: 6px 16px;
+            font-size: 24px;
+        }
+    }
+    .item-btn {
+        cursor: pointer;
+        background-image: url('../images/04_btn.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 10vh;
+        left: 25vw;
+        width: 50vw;
+        height: 15vw;
+    }
+}
