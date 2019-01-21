@@ -4,6 +4,7 @@
     // load dependencies
     var animationControl = require('./animation-control.js');
     // var reposition = require('./reposition.js');
+    var draw = require('./draw.js');
 
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
@@ -123,7 +124,17 @@
             }
 
             console.log(name, sex, birthday);
-        })
+        });
+        draw({
+            cvs: 'result',
+        });
+        $('#replaybtn').click(function () {
+            mySwiper.slideTo(1);
+        });
+
+        $('#sharebtn').click(function () {
+            alert('tan');
+        });
 
         // hide loading animation since everything is ready
         $('.loading-overlay').slideUp();

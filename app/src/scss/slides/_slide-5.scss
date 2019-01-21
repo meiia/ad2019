@@ -1,0 +1,35 @@
+.slide-5 {
+    .item-image {
+        background-position-x: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .result {
+        // background-size: contain;
+        position: absolute;
+        top: 2.34vh;
+        left: 4.17vw;
+        right: 4.17vw;
+        bottom: 9.38vh;
+        border: 1px solid red;
+    }
+    .item-btn {
+        cursor: pointer;
+        background-image: url('../images/04_btn.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 2.34vh;
+        width: 42.78vw;
+        height: 6.56vh;
+    }
+    #replaybtn {
+        background-image: url('../images/05_replay.png');
+        left: 4.17vw;
+    }
+    #sharebtn {
+        background-image: url('../images/05_share.png');
+        right: 4.17vw;
+    }
+}
