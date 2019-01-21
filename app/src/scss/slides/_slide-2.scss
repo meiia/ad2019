@@ -13,7 +13,7 @@
         // background-image: url('../images/github-2.png');
     }
     .item-image-1 {
-        background-image: url('../images/02_pic_1.png');
+        background-image: url('../images/02_pic_01.png');
         position: absolute;
         top: 2vw;
         left: 2vw;
@@ -21,33 +21,51 @@
         height: 69vw;
     }
     .item-image-2 {
-        background-image: url('../images/02_pic_2.png');
+        background-image: url('../images/02_pic_02.png');
         position: absolute;
         top: 2vw;
         right: 2vw;
         width: 39vw;
         height: 69vw;
+
+        .item-image-2-dialog {
+            background-image: url('../images/02_dialog_2.png');
+            position: absolute;
+            top: 0;
+            left: 23%;
+            width: 62%;
+            height: 39%;
+        }
     }
     .item-image-3 {
-        background-image: url('../images/02_pic_3.png');
+        background-image: url('../images/02_pic_03.png');
         position: absolute;
         top: 73vw;
         left: 2vw;
         width: 96vw;
         height: 96vw;
+
+        .item-image-3-blink {
+            background-image: url('../images/02_pic_blink.png');
+            position: absolute;
+            top: 13%;
+            left: 38%;
+            width: 22%;
+            height: 22%;
+        }
     }
-    .item-image-cover {
-        opacity: .48;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url('../images/02_pic_cover.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+    // .item-image-cover {
+    //     opacity: .48;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background-image: url('../images/02_pic_cover.png');
+    //     background-position: center;
+    //     background-size: 100% 100%;
+    //     background-repeat: no-repeat;
+    // }
     .item-btn {
         cursor: pointer;
         background-image: url('../images/02_pic_btn.png');

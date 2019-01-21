@@ -42,17 +42,22 @@
             <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="6.3s">......</p>
         </div>
         <div class="swiper-slide slide-2">
-            <div class="item-image item-image-1 animated" data-ani-name="slideInLeft" data-ani-duration="1s" data-ani-delay="0.3s"></div>
-            <div class="item-image item-image-2 animated" data-ani-name="slideInRight" data-ani-duration="1s" data-ani-delay="1.3s"></div>
-            <div class="item-image item-image-3 animated" data-ani-name="slideInUp" data-ani-duration="1s" data-ani-delay="2.3s"></div>
-            <div class="item-image item-image-cover"></div>
-            <div id="enterJinja" class="item-btn animated" data-ani-name="slideInUp" data-ani-duration="1s" data-ani-delay="2.3s"></div>
+            <div class="item-image item-image-1 animated" data-ani-name="fadeInLeft" data-ani-duration="1s" data-ani-delay="0.3s"></div>
+            <div class="item-image item-image-2 animated" data-ani-name="fadeInRight" data-ani-duration="1s" data-ani-delay="1.3s">
+                <div class="item-image item-image-2-dialog"></div>
+            </div>
+            <div class="item-image item-image-3 animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="2.3s">
+                <div id="enterJinja" class="item-image animated infinite flash item-image-3-blink" data-ani-duration="3s"></div>
+            </div>
+            <!-- <div class="item-image item-image-cover"></div> -->
+            <!-- <div id="enterJinja" class="item-btn animated" data-ani-name="slideInUp" data-ani-duration="1s" data-ani-delay="2.3s"></div> -->
             <!-- <p class="item-text animated" data-ani-name="bounceInUp" data-ani-duration="1s" data-ani-delay="0.3s">I'm a frontend developer!</p> -->
         </div>
         <div class="swiper-slide slide-3">
             <!-- <div class="item-image animated" data-ani-name="flipInX" data-ani-duration="1s" data-ani-delay="0s"></div> -->
-            <p class="item-text">你就是万里挑一的幸运儿，作为设计师<br />的庇护者，我预见你在新年里将会有好事发生！</p>
+            <!-- <p class="item-text">你就是万里挑一的幸运儿，作为设计师<br />的庇护者，我预见你在新年里将会有好事发生！</p> -->
             <div class="item-hands"></div>
+            <div class="item-god"></div>
             <div class="item-cloud item-cloud-1"></div>
             <div class="item-cloud item-cloud-2"></div>
             <div class="item-cloud item-cloud-3"></div>
@@ -64,17 +69,19 @@
             <div class="item-cloud item-cloud-2"></div>
             <div class="item-cloud item-cloud-3"></div>
             <div class="item-cloud item-cloud-4"></div>
-            <div class="item-form" mbsc-form>
+            <div class="item-form">
                 <div class="item-input-wrap">
                     <input id="name" type="text" maxlength="20" placeholder="姓名">
                 </div>
+                <div class="item-input-wrap">
+                    <select name="sex" id="sex">
+                        <option value="">性别</option>
+                        <option value="0">男</option>
+                        <option value="1">女</option>
+                    </select>
+                </div>
                 <div class="item-input-wrap clearfix">
-                    <div class="age">
-                        <input type="text" id="ageinput" placeholder="年龄">
-                        <select name="age" id="ageselect">
-                            <option value="">年龄</option>
-                        </select>
-                    </div>
+                    <input type="date" id="birthday" placeholder="生日">
                 </div>
             </div>
             <div id="submit" class="item-image item-btn"></div>

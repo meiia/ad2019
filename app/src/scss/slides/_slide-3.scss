@@ -1,45 +1,46 @@
 .slide-3 {
-    background-image: url('../images/03_bg.png');
+    background-image: url('../images/03_bg1.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+
     .item-image {
         background-position-x: center;
         background-size: cover;
         background-repeat: no-repeat;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
-        // background-image: url('../images/03_bg.png');
     }
-    // .item-image-title {
-    //     background-image: url('../images/02_pic_2.png');
-    //     position: absolute;
-    //     top: 2vw;
-    //     right: 2vw;
-    //     width: 39vw;
-    //     height: 69vw;
-    // }
-    .item-btn {
-        cursor: pointer;
-        background-image: url('../images/03_btn.png');
+    .item-god {
+        background-image: url('../images/03_god.png');
         background-position: center;
-        background-size: contain;
+        // background-size: contain;
+        background-size: auto 100%;
         background-repeat: no-repeat;
         position: absolute;
-        bottom: 10vh;
-        left: 25vw;
-        width: 50vw;
-        height: 15vw;
+        top: 20.4vh;
+        bottom: 15.6vh;
+        left: 0;
+        right: 0;
     }
     .item-hands {
         background-image: url('../images/03_hands.gif');
         background-repeat: no-repeat;
-        // width: 20vw;
-        // height: 19vw;
+        background-size: auto 100%;
         background-position: center;
-        background-size: contain;
+        position: absolute;
+        height: 30vh;
+        width: 100%;
+        top: 26.7vh;
+        left: 2px;
+    }
+    .item-btn {
+        cursor: pointer;
+        background-image: url('../images/03_btn.png');
+        background-position: center;
+        background-size: auto 100%;
         background-repeat: no-repeat;
         position: absolute;
+        bottom: 6vh;
+        width: 100%;
+        height: 13vh;
     }
     .item-cloud {
         background-image: url('../images/03_cloud.png');

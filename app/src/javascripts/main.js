@@ -3,7 +3,7 @@
 
     // load dependencies
     var animationControl = require('./animation-control.js');
-    var reposition = require('./reposition.js');
+    // var reposition = require('./reposition.js');
 
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
@@ -62,6 +62,11 @@
                 if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
                     bgMusic.play();
                 }
+                if (swiper.activeIndex === 0) {
+                    swiper.enableTouchControl();
+                } else {
+                    swiper.disableTouchControl();
+                }
             }
         });
 
@@ -76,45 +81,49 @@
         });
 
         // reposition when the window resized
-        var repostionHands = function () {
-            var pos = reposition({
-                iw: 549,
-                ih: 978,
-                ew: 681,
-                eh: 400,
-                ex: 42,
-                ey: 355
-            });
+        // var repostionHands = function () {
+        //     var pos = reposition({
+        //         iw: 549,
+        //         ih: 978,
+        //         ew: 681,
+        //         eh: 400,
+        //         ex: 42,
+        //         ey: 355
+        //     });
             
-            $('.item-hands').css({
-                width: pos.w,
-                height: pos.h,
-                top: pos.y,
-                left: pos.x
-            });
-        }
-        repostionHands();
-        window.onresize = repostionHands;
+        //     $('.item-hands').css({
+        //         width: pos.w,
+        //         height: pos.h,
+        //         top: pos.y,
+        //         left: pos.x
+        //     });
+        // }
+        // repostionHands();
+        // window.onresize = repostionHands;
 
-        // set the default age to 25
-        // $('#ageinput').click(function (e) {
-        //     e.preventDefault();
-        //     $('#ageinput').hide();
-        //     $('#ageselect_dummy').show();
-        //     $('#ageselect_dummy').click();
-        // });
-        var options = '';
-        for (var i = 1; i <= 100; i++) {
-            options += '<option value="' + i + '">' + i + '</option>';
-        }
-        $('#ageselect').html(options);
-        $('#ageselect').val('20');
-        // $('#ageselect').mobiscroll().select({
-        //     // theme: 'ios',
-        //     lang: 'zh',
-        //     display: 'bottom',
-        //     // minWidth: 200
-        // });
+        // When click the age input, turn it to a date type input.
+        $('#ageinput').on('focus', function () {
+            // var $this = $(this);
+            this.type = 'date';
+            this.focus();
+        })
+
+        // Submit
+        $('#submit').click(function () {
+            var name = encodeURI($('#name').val());
+            var sex = $('#sex').val();
+            var birthday = $('#birthday').val();
+
+            if (name == '') {
+                return alert('请输入姓名');
+            } else if (sex == '') {
+                return alert('请选择性别');
+            } else if (birthday == '') {
+                return alert('请选择生日');
+            }
+
+            console.log(name, sex, birthday);
+        })
 
         // hide loading animation since everything is ready
         $('.loading-overlay').slideUp();
