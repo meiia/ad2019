@@ -123,11 +123,45 @@
                 return alert('请选择生日');
             }
 
-            console.log(name, sex, birthday);
+            // get data
+            $.getJSON('./search', {
+                name,
+                sex,
+                birthday
+            }, function (res) {
+                // var res = {
+                //     status: 200,
+                //     data: {
+                //         name: '美丫小姐姐',
+                //         text1: '在Adobe之神的庇护下',
+                //         text2: '工作更加得心应手，并获得',
+                //         text3: '每3稿出现1次1稿过的隐藏技能！',
+                //         result: 1,
+                //         color: '#a10266'
+                //     }
+                // }
+                if (res.status == 200) {
+                    $('.item-drawing').show();
+                    var img = new Image();
+                    img.src = '../images/' + res.data.result + '.jpg';
+                    img.onload = function () {
+                        $('.item-drawing').hide();
+                        draw({
+                            cvs: 'result',
+                            img: img,
+                            text1: res.data.name + res.data.text1,
+                            text2: res.data.text2,
+                            text3: res.data.text3,
+                        });
+                        $('.slide-5').css('background-color', res.data.color);
+                        mySwiper.slideTo(5);
+                    }
+                } else {
+                    alert(data.message);
+                }
+            });
         });
-        draw({
-            cvs: 'result',
-        });
+
         $('#replaybtn').click(function () {
             mySwiper.slideTo(1);
         });

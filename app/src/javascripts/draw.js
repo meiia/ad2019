@@ -45,26 +45,20 @@ module.exports = function (config) {
     var vw = document.body.clientWidth;     // viewport's width
     var vh = document.body.clientHeight;    // viewport's height
     var lineh = 38;
-    var text1 = '美丫小姐姐在Adobe之神的庇护下';
-    var text2 = '工作更加得心应手，并获得';
-    var text3 = '每3稿出现1次1稿过的隐藏技能！';
-    var img = new Image();
+    var text1 = config.text1;
+    var text2 = config.text2;
+    var text3 = config.text3;
+    var img = config.img;
 
-    img.src = "../images/1.jpg";
-    // Content's width is bigger than height
-    // if (vw/vh > iw/ih) {
-    img.onload = function () {
-        ctx.drawImage(img, 0, 0, iw, ih);
-        ctx.font = '26px Arial';
-        ctx.fillStyle = '#fff';
-        ctx.textAlign = 'center';
-        ctx.shadowColor = '#1e49ac';
-        ctx.ShadowOffsetX = 1;
-        ctx.shadowOffsetY = 1;
-        ctx.shadowBlur = 6;
-        ctx.fillText(text1, iw / 2, ey, ew);
-        ctx.fillText(text2, iw / 2, ey + lineh, ew);
-        ctx.fillText(text3, iw / 2, ey + 2 * lineh, ew);
-    }
-    // }
+    ctx.drawImage(img, 0, 0, iw, ih);
+    ctx.font = '26px Arial';
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.shadowColor = '#1e49ac';
+    ctx.ShadowOffsetX = 1;
+    ctx.shadowOffsetY = 1;
+    ctx.shadowBlur = 6;
+    ctx.fillText(text1, iw / 2, ey, ew);
+    ctx.fillText(text2, iw / 2, ey + lineh, ew);
+    ctx.fillText(text3, iw / 2, ey + 2 * lineh, ew);
 }
