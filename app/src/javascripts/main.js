@@ -1,5 +1,5 @@
 (function () {
-    'use strict';
+    // 'use strict';
 
     // load dependencies
     var animationControl = require('./animation-control.js');
@@ -125,9 +125,9 @@
 
             // get data
             $.getJSON('./search', {
-                name,
-                sex,
-                birthday
+                name: decodeURI(name),
+                sex: sex,
+                birthday: birthday
             }, function (res) {
                 // var res = {
                 //     status: 200,

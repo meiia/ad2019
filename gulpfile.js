@@ -179,10 +179,10 @@ gulp.task('minify-css', function () {
 // uglify app/dist/javascripts/bundle.js and save as app/dist/javascripts/bundle.min.js
 gulp.task('uglify-js', function () {
     return gulp.src('app/dist/javascripts/bundle.js')
-        // .pipe(uglify())
-        // .pipe(rename({
-        //     suffix: '.min'
-        // }))
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest('app/dist/javascripts'));
 });
 
