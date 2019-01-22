@@ -12,6 +12,11 @@
         right: 4.17vw;
         bottom: 9.38vh;
         border: 1px solid red;
+        
+        #result {
+            height: 100%;
+            margin: 0 auto;
+        }
     }
     .item-btn {
         cursor: pointer;
