@@ -5,6 +5,7 @@
     var animationControl = require('./animation-control.js');
     // var reposition = require('./reposition.js');
     var draw = require('./draw.js');
+    var message = require('./message.js');
 
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
@@ -22,6 +23,11 @@
                 bgMusic.pause();
                 $(this).addClass('paused');
             }
+        });
+
+        // bgm auto play(when the screen is first touched)
+        $('html').one('touchstart', function () {
+            bgMusic.play();
         });
 
         // init Swiper
@@ -73,12 +79,12 @@
 
         // enter jinja
         $enterJinjaBtn.click(function () {
-            mySwiper.slideTo(3);
+            mySwiper.slideTo(2);
         });
 
         // enter form
         $enterForm.click(function () {
-            mySwiper.slideTo(4);
+            mySwiper.slideTo(3);
         });
 
         // reposition when the window resized
@@ -154,6 +160,11 @@
                             text3: res.data.text3,
                         });
                         $('.slide-5').css('background-color', res.data.color);
+                        // if ($('.result').height()/$('.result').width() > 1334/750) {
+                        //     $('#result').css('width', '100%');
+                        // } else {
+                        //     $('#result').css('height', '100%');
+                        // }
                         mySwiper.slideTo(5);
                     }
                 } else {
@@ -163,11 +174,11 @@
         });
 
         $('#replaybtn').click(function () {
-            mySwiper.slideTo(1);
+            mySwiper.slideTo(0);
         });
 
         $('#sharebtn').click(function () {
-            alert('tan');
+            message('长按保存图片，<br/>分享好运好朋友圈吧！');
         });
 
         // hide loading animation since everything is ready
