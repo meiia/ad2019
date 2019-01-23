@@ -164,22 +164,26 @@
                         // }
                         mySwiper.slideTo(5);
                     };
+                    var timeYes = false;
+                    var imageYes = false;
                     var hasShown = false;
+                    var img = new Image();
+                    img.src = '../images/' + res.data.result + '.jpg';
+                    img.onload = function () {
+                        imageYes = true;
+                        if (timeYes && !hasShown) {
+                            d();
+                            hasShown = true;
+                        }
+                    }
                     setTimeout(function () {
-                        if (!hasShown) {
+                        timeYes = true;
+                        if (imageYes && !hasShown) {
                             d();
                             hasShown = true;
                         }
                     }, 3000);
                     $('.item-drawing').show();
-                    var img = new Image();
-                    img.src = '../images/' + res.data.result + '.jpg';
-                    img.onload = function () {
-                        if (!hasShown) {
-                            d();
-                            hasShown = true;
-                        }
-                    }
                 } else {
                     alert(data.message);
                 }
