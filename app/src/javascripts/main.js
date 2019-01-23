@@ -147,10 +147,7 @@
                 //     }
                 // }
                 if (res.status == 200) {
-                    $('.item-drawing').show();
-                    var img = new Image();
-                    img.src = '../images/' + res.data.result + '.jpg';
-                    img.onload = function () {
+                    var d = function () {
                         $('.item-drawing').hide();
                         draw({
                             cvs: 'result',
@@ -166,6 +163,22 @@
                         //     $('#result').css('height', '100%');
                         // }
                         mySwiper.slideTo(5);
+                    };
+                    var hasShown = false;
+                    setTimeout(function () {
+                        if (!hasShown) {
+                            d();
+                            hasShown = true;
+                        }
+                    }, 3000);
+                    $('.item-drawing').show();
+                    var img = new Image();
+                    img.src = '../images/' + res.data.result + '.jpg';
+                    img.onload = function () {
+                        if (!hasShown) {
+                            d();
+                            hasShown = true;
+                        }
                     }
                 } else {
                     alert(data.message);
