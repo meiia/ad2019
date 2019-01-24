@@ -33,7 +33,7 @@
         // init Swiper
         var mySwiper = new Swiper('.swiper-container', {
             mousewheelControl: true,
-            effect: 'coverflow',    // slide, fade, coverflow or flip
+            effect: 'fade',    // slide, fade, coverflow or flip
             speed: 400,
             direction: 'vertical',  // 'horizontal' or 'vertical' is OK
             fade: {
@@ -109,24 +109,25 @@
         // window.onresize = repostionHands;
 
         // When click the age input, turn it to a date type input.
-        $('#ageinput').on('focus', function () {
-            // var $this = $(this);
-            this.type = 'date';
-            this.focus();
+        $('#birthdayinput').click(function (e) {
+            e.preventDefault();
+            $('#birthdayinput').hide();
+            $('#birthdayselect').show();
+            $('#birthdayselect').click();
         })
 
         // Submit
         $('#submit').click(function () {
             var name = encodeURI($('#name').val());
             var sex = $('#sex').val();
-            var birthday = $('#birthday').val();
+            var birthday = $('#birthdayselect').val();
 
             if (name == '') {
-                return alert('请输入姓名');
+                return message('请输入姓名');
             } else if (sex == '') {
-                return alert('请选择性别');
+                return message('请选择性别');
             } else if (birthday == '') {
-                return alert('请选择生日');
+                return message('请选择生日');
             }
 
             // get data

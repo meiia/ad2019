@@ -45,11 +45,11 @@ body {
 
     #modal-content {
         position: absolute;
-        bottom: 145px;
         height: 120px;
         width: 220px;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
         background-image: url('../images/modal.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;

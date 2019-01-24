@@ -9,6 +9,10 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
 
     <!-- Uncomment this if you need apple touch icon. -->
     <!--
@@ -26,6 +30,8 @@
 <body>
 <div class="loading-overlay">
     <img src="images/loading.svg">
+
+    <!-- <img id="loading-pic" src="images/loading.png"> -->
 </div>
 
 <div class="swiper-container">
@@ -56,6 +62,7 @@
         <div class="swiper-slide slide-3">
             <!-- <div class="item-image animated" data-ani-name="flipInX" data-ani-duration="1s" data-ani-delay="0s"></div> -->
             <!-- <p class="item-text">你就是万里挑一的幸运儿，作为设计师<br />的庇护者，我预见你在新年里将会有好事发生！</p> -->
+            <div class="item-title"></div>
             <div class="item-hands"></div>
             <div class="item-god"></div>
             <div class="item-cloud item-cloud-1"></div>
@@ -71,7 +78,7 @@
             <div class="item-cloud item-cloud-4"></div>
             <div class="item-form">
                 <div class="item-input-wrap">
-                    <input id="name" type="text" maxlength="20" placeholder="姓名">
+                    <input id="name" type="text" maxlength="20" placeholder="姓名" autocomplete="off">
                 </div>
                 <div class="item-input-wrap">
                     <select name="sex" id="sex">
@@ -81,7 +88,8 @@
                     </select>
                 </div>
                 <div class="item-input-wrap clearfix">
-                    <input type="date" id="birthday" placeholder="生日">
+                    <input type="text" id="birthdayinput" placeholder="生日" autocomplete="off">
+                    <input type="date" id="birthdayselect" placeholder="生日" autocomplete="off">
                 </div>
             </div>
             <div id="submit" class="item-image item-btn"></div>
