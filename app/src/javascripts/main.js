@@ -152,23 +152,23 @@
                 return message('请选择生日');
             }
 
-            // $.getJSON('./search', {
-            //     name: decodeURI(name),
-            //     sex: sex,
-            //     birthday: birthday,
-            //     history: resultHistory.join(',')
-            // }, function (res) {
-                var res = {
-                    status: 200,
-                    data: {
-                        name: '美丫小姐姐',
-                        text1: '在Adobe之神的庇护下',
-                        text2: '工作更加得心应手，并获得',
-                        text3: '每3稿出现1次1稿过的隐藏技能！',
-                        result: 1,
-                        color: '#a10266'
-                    }
-                }
+            $.getJSON('./search', {
+                name: decodeURI(name),
+                sex: sex,
+                birthday: birthday,
+                history: resultHistory.join(',')
+            }, function (res) {
+                // var res = {
+                //     status: 200,
+                //     data: {
+                //         name: '美丫小姐姐',
+                //         text1: '在Adobe之神的庇护下',
+                //         text2: '工作更加得心应手，并获得',
+                //         text3: '每3稿出现1次1稿过的隐藏技能！',
+                //         result: 1,
+                //         color: '#a10266'
+                //     }
+                // }
                 if (res.status == 200) {
                     var d = function (img) {
                         $('.item-drawing').hide();
@@ -210,7 +210,7 @@
                 } else {
                     message(data.message);
                 }
-            // });
+            });
         });
 
         $('#replaybtn').click(function () {
