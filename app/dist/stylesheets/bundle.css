@@ -4749,7 +4749,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: radial-gradient(white, white);
+  background: radial-gradient(white, rgba(255, 255, 255, 0.8) 75%);
   animation: waveinout 2s ease-out;
 }
 
@@ -4764,9 +4764,9 @@ body {
     height: 1000px;
     opacity: 1;
   }
-  0% {
-    width: 0px;
-    height: 0px;
+  100% {
+    width: 1000px;
+    height: 1000px;
     opacity: 0;
   }
 }
