@@ -156,7 +156,8 @@
             var qrcode = new Image();
             qrcode.src = '../images/qrcode_02.png';
 
-            $.getJSON('http://47.101.222.238/search', {
+            // $.getJSON('http://47.101.222.238/search', {
+            $.getJSON('./search', {
                 name: decodeURI(name),
                 sex: sex,
                 birthday: birthday,
