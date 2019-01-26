@@ -18,6 +18,11 @@
         p {
             margin: 0;
             letter-spacing: 2px;
+            color: #fff;
+        }
+        .loaded-text {
+            animation: flash 1s infinite linear;
+            display: none;
         }
 
         .loading-line {
@@ -35,18 +40,29 @@
     }
 }
 
-@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
-    .masked{
-        background-image: -webkit-linear-gradient(left, #484ed3, #ffffff 25%, #484ed3 50%, #ffffff 75%, #484ed3);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-size: 200% 100%;
-        animation: masked-animation 4s infinite linear;
-    }
+.masked{
+    background-image: -webkit-linear-gradient(left, #484ed3, #ffffff 25%, #484ed3 50%, #ffffff 75%, #484ed3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    animation: masked-animation 4s infinite linear;
 }
+
 @keyframes masked-animation {
     0%  { background-position: 0 0;}
     100% { background-position: -100% 0;}
+}
+
+@keyframes flash {
+    0%  {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes loadingAni {

@@ -49,8 +49,11 @@ module.exports = function (config) {
     var text2 = config.text2;
     var text3 = config.text3;
     var img = config.img;
+    var qrcode = config.qrcode;
 
     ctx.drawImage(img, 0, 0, iw, ih);
+    // drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
+    ctx.drawImage(qrcode, 516, 1145, 100, 100);
     ctx.font = '26px Arial';
     ctx.fillStyle = '#fff';
     ctx.textAlign = 'center';

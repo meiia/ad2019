@@ -71,11 +71,11 @@
                     swiper.disableTouchControl();
                 }
             },
-            onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
-                if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
-                    bgMusic.play();
-                }
-            }
+            // onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
+            //     if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
+            //         bgMusic.play();
+            //     }
+            // }
         });
 
         // enter jinja
@@ -153,7 +153,10 @@
                 return message('请选择生日');
             }
 
-            $.getJSON('./search', {
+            var qrcode = new Image();
+            qrcode.src = '../images/qrcode_02.png';
+
+            $.getJSON('http://47.101.222.238/search', {
                 name: decodeURI(name),
                 sex: sex,
                 birthday: birthday,
@@ -179,6 +182,7 @@
                             text1: res.data.name + res.data.text1,
                             text2: res.data.text2,
                             text3: res.data.text3,
+                            qrcode: qrcode
                         });
                         $('.slide-5').css('background-color', res.data.color);
                         mySwiper.slideTo(5);
@@ -229,7 +233,14 @@
         });
 
         // hide loading animation since everything is ready
-        $('.slide-1 .item-text').show();
-        $('.loading-overlay').slideUp();
+        $('.loading-text').hide();
+        $('.loaded-text').show();
+        $('.loading-overlay').click(function () {
+            $('.slide-1 .item-text').show();
+            $('.loading-overlay').slideUp();
+            if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
+                bgMusic.play();
+            }
+        })
     });
 })();
