@@ -11,7 +11,7 @@
         var bgMusic = $('audio').get(0);
         var $btnMusic = $('.btn-music');
         var $upArrow = $('.up-arrow');
-        var $enterJinjaBtn = $('#enterJinja');
+        // var $enterJinjaBtn = $('#enterJinja');
         var $enterForm = $('#enterForm');
         var resultHistory = [];
 
@@ -123,12 +123,13 @@
             $('#birthdayselect').show();
             // $('#birthdayselect').click();
             $('#birthdayselect').focus();
-        }).blur(function () {
-            $('#birthdayinput').val($('#birthdayselect').val());
-            $('#birthdayinput').show();
-            $('#birthdayselect').hide();
         })
         $('input, select').blur(function () {
+            if ($(this) === $('#birthdayselect')) {
+                $('#birthdayinput').val($('#birthdayselect').val());
+                $('#birthdayinput').show();
+                $('#birthdayselect').hide();
+            }
             document.body.scrollTop = 0;
         })
         $('#sex').change(function () {
