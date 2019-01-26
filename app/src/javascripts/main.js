@@ -15,6 +15,12 @@
         var $enterForm = $('#enterForm');
         var resultHistory = [];
 
+        // reset swiper-container height and width
+        $('.swiper-container').css({
+            height: document.body.clientHeight,
+            width: document.body.clientWidth
+        })
+
         // background music control
         $btnMusic.click(function () {
             if (bgMusic.paused) {
@@ -156,8 +162,8 @@
             var qrcode = new Image();
             qrcode.src = '../images/qrcode_02.png';
 
-            // $.getJSON('http://47.101.222.238/search', {
-            $.getJSON('./search', {
+            $.getJSON('http://47.101.222.238/search', {
+            // $.getJSON('./search', {
                 name: decodeURI(name),
                 sex: sex,
                 birthday: birthday,

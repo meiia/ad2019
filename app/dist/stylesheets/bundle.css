@@ -5131,8 +5131,8 @@ body {
   background-size: auto 100%;
   background-repeat: no-repeat;
   position: absolute;
-  top: 20.4vh;
-  bottom: 15.6vh;
+  top: 20.4%;
+  bottom: 15.6%;
   left: 0;
   right: 0;
 }
@@ -5143,9 +5143,9 @@ body {
   background-size: auto 100%;
   background-repeat: no-repeat;
   position: absolute;
-  top: 10vh;
+  top: 10%;
   width: 100%;
-  height: 11vh;
+  height: 11%;
 }
 
 .slide-3 .item-hands {
@@ -5154,9 +5154,9 @@ body {
   background-size: auto 100%;
   background-position: center;
   position: absolute;
-  height: 30vh;
+  height: 30%;
   width: 100%;
-  top: 26.7vh;
+  top: 26.7%;
   left: 2px;
 }
 
@@ -5167,9 +5167,9 @@ body {
   background-size: auto 100%;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: 6vh;
+  bottom: 6%;
   width: 100%;
-  height: 13vh;
+  height: 13%;
 }
 
 .slide-3 .item-cloud {
@@ -5185,23 +5185,23 @@ body {
 
 .slide-3 .item-cloud-1 {
   left: 0;
-  top: 23vh;
+  top: 23%;
 }
 
 .slide-3 .item-cloud-2 {
   left: 0;
-  top: 68vh;
+  top: 68%;
 }
 
 .slide-3 .item-cloud-3 {
   right: 0;
-  top: 23vh;
+  top: 23%;
   transform: scaleX(-1);
 }
 
 .slide-3 .item-cloud-4 {
   right: 0;
-  top: 68vh;
+  top: 68%;
   transform: scaleX(-1);
 }
 

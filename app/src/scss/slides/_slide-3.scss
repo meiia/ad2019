@@ -15,8 +15,8 @@
         background-size: auto 100%;
         background-repeat: no-repeat;
         position: absolute;
-        top: 20.4vh;
-        bottom: 15.6vh;
+        top: 20.4%;
+        bottom: 15.6%;
         left: 0;
         right: 0;
     }
@@ -26,9 +26,9 @@
         background-size: auto 100%;
         background-repeat: no-repeat;
         position: absolute;
-        top: 10vh;
+        top: 10%;
         width: 100%;
-        height: 11vh;
+        height: 11%;
     }
     .item-hands {
         background-image: url('../images/03_hands.gif');
@@ -36,9 +36,9 @@
         background-size: auto 100%;
         background-position: center;
         position: absolute;
-        height: 30vh;
+        height: 30%;
         width: 100%;
-        top: 26.7vh;
+        top: 26.7%;
         left: 2px;
     }
     .item-btn {
@@ -48,9 +48,9 @@
         background-size: auto 100%;
         background-repeat: no-repeat;
         position: absolute;
-        bottom: 6vh;
+        bottom: 6%;
         width: 100%;
-        height: 13vh;
+        height: 13%;
     }
     .item-cloud {
         background-image: url('../images/03_cloud.png');
@@ -64,20 +64,20 @@
     }
     .item-cloud-1 {
         left: 0;
-        top: 23vh;
+        top: 23%;
     }
     .item-cloud-2 {
         left: 0;
-        top: 68vh;
+        top: 68%;
     }
     .item-cloud-3 {
         right: 0;
-        top: 23vh;
+        top: 23%;
         transform: scaleX(-1);
     }
     .item-cloud-4 {
         right: 0;
-        top: 68vh;
+        top: 68%;
         transform: scaleX(-1);
     }
     .item-text {
