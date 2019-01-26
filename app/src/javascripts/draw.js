@@ -61,4 +61,9 @@ module.exports = function (config) {
     ctx.fillText(text1, iw / 2, ey, ew);
     ctx.fillText(text2, iw / 2, ey + lineh, ew);
     ctx.fillText(text3, iw / 2, ey + 2 * lineh, ew);
+
+    var base64ImgSrc = cvs.toDataURL("image/png");
+    var img = document.createElement("img");
+    img.src = base64ImgSrc;
+    $('.result-wrap img').replaceWith(img);
 }

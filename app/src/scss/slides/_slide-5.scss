@@ -4,7 +4,7 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .result {
+    .result-wrap {
         // background-size: contain;
         position: absolute;
         top: 2.34vh;
@@ -13,12 +13,16 @@
         bottom: 9.38vh;
         // border: 1px solid red;
         
-        #result {
+        #result,
+        img {
             height: 100%;
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+        }
+        #result {
+            display: none;
         }
     }
     .item-btn {
