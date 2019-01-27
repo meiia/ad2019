@@ -40,7 +40,7 @@
         }
     }
     .item-image-3 {
-        background-image: url('../images/02_pic_03.png');
+        background-image: url('../images/02_pic_3.png');
         position: absolute;
         top: 73vw;
         left: 2vw;
@@ -54,6 +54,14 @@
             left: 55%;
             width: 37%;
             height: 39%;
+        }
+
+        .item-image-3-tips {
+            position: absolute;
+            top: 35%;
+            left: 40%;
+            color: #fff;
+            margin: 0;
         }
 
         .item-image-3-blink {

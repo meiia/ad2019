@@ -5130,7 +5130,7 @@ body {
 }
 
 .slide-2 .item-image-3 {
-  background-image: url("../images/02_pic_03.png");
+  background-image: url("../images/02_pic_3.png");
   position: absolute;
   top: 73vw;
   left: 2vw;
@@ -5145,6 +5145,14 @@ body {
   left: 55%;
   width: 37%;
   height: 39%;
+}
+
+.slide-2 .item-image-3 .item-image-3-tips {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  color: #fff;
+  margin: 0;
 }
 
 .slide-2 .item-image-3 .item-image-3-blink {
