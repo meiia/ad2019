@@ -56,14 +56,14 @@
                 animationControl.initAnimationItems();  // get items ready for animations
                 animationControl.playAnimation(swiper); // play animations of the first slide
             },
-            onTransitionStart: function (swiper) {     // on the last slide, hide .btn-swipe
-                // if (swiper.activeIndex === swiper.slides.length - 1) {
-                if (swiper.activeIndex === 0) {
-                    $upArrow.show();
-                } else {
-                    $upArrow.hide();
-                }
-            },
+            // onTransitionStart: function (swiper) {     // on the last slide, hide .btn-swipe
+            //     // if (swiper.activeIndex === swiper.slides.length - 1) {
+            //     if (swiper.activeIndex === 0) {
+            //         $upArrow.show();
+            //     } else {
+            //         $upArrow.hide();
+            //     }
+            // },
             onTransitionEnd: function (swiper) {       // play animations of the current slide
                 animationControl.playAnimation(swiper);
                 if (swiper.activeIndex != 3) {
@@ -197,9 +197,7 @@
                         bgMusic.play();
                     }
                     $btnMusic.show();
-                    setTimeout(function () {
-                        $upArrow.fadeIn();
-                    }, 2000);
+                    $upArrow.show();
                 });
             })
         });

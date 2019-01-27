@@ -4936,6 +4936,7 @@ body {
 
 .up-arrow {
   display: none;
+  opacity: 0;
   width: 2rem;
   height: 2rem;
   position: fixed;
