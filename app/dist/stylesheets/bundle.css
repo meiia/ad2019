@@ -4838,7 +4838,7 @@ body {
 }
 
 .loading-overlay .loading-content .loaded-text {
-  animation: flash 1s infinite linear;
+  animation: flash1 1s infinite linear;
   display: none;
 }
 
@@ -4872,7 +4872,7 @@ body {
   }
 }
 
-@keyframes flash {
+@keyframes flash1 {
   0% {
     opacity: 1;
   }

@@ -21,7 +21,7 @@
             color: #fff;
         }
         .loaded-text {
-            animation: flash 1s infinite linear;
+            animation: flash1 1s infinite linear;
             display: none;
         }
 
@@ -53,7 +53,7 @@
     100% { background-position: -100% 0;}
 }
 
-@keyframes flash {
+@keyframes flash1 {
     0%  {
         opacity: 1;
     }
