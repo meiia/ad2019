@@ -20,6 +20,19 @@
         color: #fff;
         font-size: 1.5rem;
     }
+
+    .loading-line {
+        width: 1px;
+        height: 30px;
+        background-color: #fff;
+        margin: 10px auto;
+        background-image: -webkit-linear-gradient(top, #ffffff, #484ed3);
+    }
+
+    img {
+        animation: loadingAni 3s infinite linear;
+        width: 25px;
+    }
 }
 
 @keyframes upArrowAni {

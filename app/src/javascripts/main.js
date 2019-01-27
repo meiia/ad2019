@@ -6,6 +6,11 @@
     // var reposition = require('./reposition.js');
     var draw = require('./draw.js');
     var message = require('./message.js');
+    // var mobiscroll = require('@mobiscroll/jquery-lite');
+    // console.log(mobiscroll)
+    // mobiscroll.settings = {
+    //     theme: 'mobiscroll'
+    // };
 
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
@@ -122,6 +127,8 @@
         // repostionHands();
         // window.onresize = repostionHands;
 
+        // $('#birthday').mobiscroll().date();
+
         // When click the age input, turn it to a date type input.
         $('#birthdayinput').click(function (e) {
             e.preventDefault();
@@ -158,12 +165,13 @@
             } else if (birthday == '') {
                 return message('请选择生日');
             }
+            $('.drawing').show();
 
             var qrcode = new Image();
             qrcode.src = '../images/qrcode_02.png';
 
-            $.getJSON('http://47.101.222.238/search', {
-            // $.getJSON('./search', {
+            // $.getJSON('http://47.101.222.238/search', {
+            $.getJSON('./search', {
                 name: decodeURI(name),
                 sex: sex,
                 birthday: birthday,
@@ -182,7 +190,7 @@
                 // }
                 if (res.status == 200) {
                     var d = function (img) {
-                        $('.item-drawing').hide();
+                        $('.drawing').hide();
                         draw({
                             cvs: 'result',
                             img: img,
@@ -218,7 +226,6 @@
                             hasShown = true;
                         }
                     }, 3000);
-                    $('.item-drawing').show();
                 } else {
                     message(data.message);
                 }
@@ -226,13 +233,14 @@
         });
 
         $('#replaybtn').click(function () {
-            $('#name').val('');
-            $('#sex').val('');
-            $('#sex').css('color', '#f7f397');
-            $('#birthdayinput').val('');
-            $('#birthdayinput').show();
-            $('#birthdayselect').hide();
-            mySwiper.slideTo(0);
+            // $('#name').val('');
+            // $('#sex').val('');
+            // $('#sex').css('color', '#f7f397');
+            // $('#birthdayinput').val('');
+            // $('#birthdayinput').show();
+            // $('#birthdayselect').hide();
+            // // mySwiper.slideTo(0);
+            message('不满足这张符文，</br>还想换成其他的？', true);
         });
 
         $('#sharebtn').click(function () {

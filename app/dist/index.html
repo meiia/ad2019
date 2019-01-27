@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Adobe</title>
+    <title>Adobe新年神庙</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <!-- Add your keywords and description here for SEO. -->
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
     <meta http-equiv="Expires" content="0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-control" content="no-cache">
@@ -41,26 +41,28 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide slide-1">
             <div class="item-image animated infinite flash" data-ani-duration="3s"></div>
-            <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="0.3s" style="margin-top: 7rem">你，</p>
-            <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="1.3s">听说过那个神秘的都市传说吗？</p>
-            <br />
-            <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="2.3s">传闻在每 10000 名苦逼设计师中</p>
-            <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="3.3s">会出现 1 位幸运者</p>
-            <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="4.3s">将会在那条熟悉地加班回家的路上</p>
-            <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="5.3s">被 Adobe 之神选中</p>
-            <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="6.3s">......</p>
+            <div class="animated" data-ani-name="fadeIn" data-ani-duration="3s" data-ani-delay="1s">
+                <p class="item-text" style="margin-top: 7rem">你，</p>
+                <p class="item-text">听说过那个神秘的都市传说吗？</p>
+                <br />
+                <p class="item-text">传闻在每 10000 名苦逼设计师中</p>
+                <p class="item-text">会出现 1 位幸运者</p>
+                <p class="item-text">将会在那条熟悉的加班回家的路上</p>
+                <p class="item-text">被 Adobe 之神选中</p>
+                <p class="item-text">......</p>
+            </div>
         </div>
         <div class="swiper-slide slide-2">
             <div class="item-image item-image-1 animated" data-ani-name="fadeInLeft" data-ani-duration="1s" data-ani-delay="0.3s">
                 <div class="item-image item-image-1-dialog animated" data-ani-name="bounceIn zoomIn" data-ani-duration="0.5s" data-ani-delay="1.3s"></div>
             </div>
-            <div class="item-image item-image-2 animated" data-ani-name="fadeInRight" data-ani-duration="1s" data-ani-delay="1.3s">
-                <div class="item-image item-image-2-dialog animated" data-ani-name="bounceIn zoomIn" data-ani-duration="0.5s" data-ani-delay="2.3s"></div>
+            <div class="item-image item-image-2 animated" data-ani-name="fadeInRight" data-ani-duration="1s" data-ani-delay="2s">
+                <div class="item-image item-image-2-dialog animated" data-ani-name="bounceIn zoomIn" data-ani-duration="0.5s" data-ani-delay="3s"></div>
             </div>
-            <div class="item-image item-image-3 animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="2.3s">
-                <div class="item-image item-image-3-dialog animated" data-ani-name="bounceIn zoomIn" data-ani-duration="0.5s" data-ani-delay="3.3s"></div>
+            <div class="item-image item-image-3 animated" data-ani-name="fadeInUp" data-ani-duration="1.5s" data-ani-delay="3.3s">
+                <div class="item-image item-image-3-dialog animated" data-ani-name="bounceIn zoomIn" data-ani-duration="0.5s" data-ani-delay="5s"></div>
                 <!-- <div class="wave"></div> -->
-                <div id="enterJinja" class="item-image animated infinite flash item-image-3-blink" data-ani-duration="3s"></div>
+                <div id="enterJinja" class="item-image item-image-3-blink animated infinite flash" data-ani-duration="3s"></div>
             </div>
         </div>
         <div class="swiper-slide slide-3">
@@ -95,9 +97,6 @@
                 </div>
             </div>
             <div id="submit" class="item-image item-btn"></div>
-            <div class="item-drawing">
-                <img src="images/drawing.gif">
-            </div>
         </div>
         <div class="swiper-slide slide-5">
             <div class="item-image result-wrap">
@@ -112,7 +111,10 @@
 </div>
 
 <button class="up-arrow">
-    <i class="icon-angle-double-up"></i>
+    <!-- <div class="loading-line"></div> -->
+    <img src="images/loading.png">
+
+    <!-- <i class="icon-angle-double-up"></i> -->
 </button>
 
 <button class="btn-music">
@@ -124,9 +126,17 @@
 </audio>
 
 <div id="modal">
-    <div id="modal-content">
-        <p id="modal-text"></p>
+    <div id="modal-wrap" class="clearfix">
+        <div id="modal-content">
+            <p id="modal-text"></p>
+            <span class="modal-btn" id="modal-save">等等我先保存</span>
+            <span class="modal-btn" id="modal-change">换!</span>
+        </div>
     </div>
+</div>
+
+<div class="drawing">
+    <img src="images/drawing.gif">
 </div>
 
 <!-- Don't delete this. It's needed for development workflow. -->
