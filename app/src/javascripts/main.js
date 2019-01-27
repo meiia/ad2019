@@ -156,13 +156,13 @@
 
         // Submit
         $('#submit').click(function () {
-            var name = encodeURI($('#name').val().trim());
+            var name = encodeURI($('#name').val());
             var sex = $('#sex').val();
             var birthday = $('#birthdayselect').val();
             if (name == '') {
                 return message('请输入姓名');
-            } else if (name.length > 5) {
-                return message('姓名不能超过5个字，<br />请重新输入');
+            // } else if (name.length > 5) {
+                // return message('姓名不能超过5个字，<br />请重新输入');
             } else if (sex == '') {
                 return message('请选择性别');
             } else if (birthday == '') {
@@ -173,8 +173,8 @@
             var qrcode = new Image();
             qrcode.src = '../images/qrcode_02.png';
 
-            $.getJSON('http://47.101.222.238/search', {
-            // $.getJSON('./search', {
+            // $.getJSON('http://47.101.222.238/search', {
+            $.getJSON('./search', {
                 name: decodeURI(name),
                 sex: sex,
                 birthday: birthday,
