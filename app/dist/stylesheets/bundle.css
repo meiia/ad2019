@@ -4894,6 +4894,7 @@ body {
 }
 
 .btn-music {
+  display: none;
   width: 2rem;
   height: 2rem;
   background-color: transparent;
@@ -4934,6 +4935,7 @@ body {
 }
 
 .up-arrow {
+  display: none;
   width: 2rem;
   height: 2rem;
   position: fixed;
@@ -5307,31 +5309,32 @@ body {
 
 .slide-4 .item-cloud-1 {
   left: 0;
-  top: 23vh;
+  top: 23%;
 }
 
 .slide-4 .item-cloud-2 {
   left: 0;
-  top: 62vh;
+  top: 62%;
 }
 
 .slide-4 .item-cloud-3 {
   right: 0;
-  top: 23vh;
+  top: 23%;
   transform: scaleX(-1);
 }
 
 .slide-4 .item-cloud-4 {
   right: 0;
-  top: 62vh;
+  top: 62%;
   transform: scaleX(-1);
 }
 
 .slide-4 .item-form {
+  position: absolute;
+  top: 36%;
+  left: 50%;
   width: 195px;
-  height: 40px;
-  margin: 0 auto;
-  margin-top: 36vh;
+  transform: translateX(-50%);
 }
 
 .slide-4 .item-form input,
@@ -5359,6 +5362,7 @@ body {
 
 .slide-4 .birthday {
   position: relative;
+  height: 40px;
 }
 
 .slide-4 .birthday #birthdayselect {
@@ -5375,9 +5379,9 @@ body {
   background-size: auto 100%;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: 9vh;
+  bottom: 9%;
   width: 100%;
-  height: 13vh;
+  height: 13%;
 }
 
 .slide-5 .item-image {

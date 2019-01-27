@@ -3,15 +3,9 @@
 
     // load dependencies
     var animationControl = require('./animation-control.js');
-    // var reposition = require('./reposition.js');
     var draw = require('./draw.js');
     var message = require('./message.js');
     var loadImg = require('./loadImg.js');
-    // var mobiscroll = require('@mobiscroll/jquery-lite');
-    // console.log(mobiscroll)
-    // mobiscroll.settings = {
-    //     theme: 'mobiscroll'
-    // };
 
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
@@ -37,11 +31,6 @@
                 $(this).addClass('paused');
             }
         });
-
-        // bgm auto play(when the screen is first touched)
-        // $('html').one('touchstart', function () {
-        //     bgMusic.play();
-        // });
 
         // init Swiper
         var mySwiper = new Swiper('.swiper-container', {
@@ -82,17 +71,11 @@
                 } else {
                     swiper.disableTouchControl();
                 }
-            },
-            // onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
-            //     if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
-            //         bgMusic.play();
-            //     }
-            // }
+            }
         });
 
         // enter jinja
         $('.slide-2 .item-image-3').click(function () {
-        // $enterJinjaBtn.click(function () {
             $('#wave').show();
             setTimeout(function () {
                 $('#wave').hide();
@@ -107,44 +90,11 @@
             mySwiper.slideTo(3);
         });
 
-        // reposition when the window resized
-        // var repostionHands = function () {
-        //     var pos = reposition({
-        //         iw: 549,
-        //         ih: 978,
-        //         ew: 681,
-        //         eh: 400,
-        //         ex: 42,
-        //         ey: 355
-        //     });
-            
-        //     $('.item-hands').css({
-        //         width: pos.w,
-        //         height: pos.h,
-        //         top: pos.y,
-        //         left: pos.x
-        //     });
-        // }
-        // repostionHands();
-        // window.onresize = repostionHands;
-
-        // $('#birthday').mobiscroll().date();
-
         // When click the age input, turn it to a date type input.
-        $('#birthdayselect').click(function (e) {
-            e.preventDefault();
-            // $('#birthdayinput').hide();
-            // $('#birthdayselect').show();
-            // // $('#birthdayselect').click();
-            // $('#birthdayselect').focus();
+        $('#birthdayselect').click(function () {
             $('#birthdayselect').css('opacity', 1);
         })
         $('input, select').blur(function () {
-            // if ($(this) === $('#birthdayselect')) {
-            //     $('#birthdayinput').val($('#birthdayselect').val());
-            //     $('#birthdayinput').show();
-            //     $('#birthdayselect').hide();
-            // }
             document.body.scrollTop = 0;
         })
         $('#sex').change(function () {
@@ -181,17 +131,6 @@
                 birthday: birthday,
                 history: resultHistory.join(',')
             }, function (res) {
-                // var res = {
-                //     status: 200,
-                //     data: {
-                //         name: '美丫小姐姐',
-                //         text1: '在Adobe之神的庇护下',
-                //         text2: '工作更加得心应手，并获得',
-                //         text3: '每3稿出现1次1稿过的隐藏技能！',
-                //         result: 1,
-                //         color: '#a10266'
-                //     }
-                // }
                 if (res.status == 200) {
                     var d = function (img) {
                         $('.drawing').hide();
@@ -237,13 +176,6 @@
         });
 
         $('#replaybtn').click(function () {
-            // $('#name').val('');
-            // $('#sex').val('');
-            // $('#sex').css('color', '#f7f397');
-            // $('#birthdayinput').val('');
-            // $('#birthdayinput').show();
-            // $('#birthdayselect').hide();
-            // // mySwiper.slideTo(0);
             message('不满足这张符文，</br>还想换成其他的？', true);
         });
 
@@ -261,10 +193,14 @@
             $('.loading-overlay').click(function () {
                 $('.loading-overlay').slideUp(function () {
                     $('.slide-1 .item-text').show();
+                    if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
+                        bgMusic.play();
+                    }
+                    $btnMusic.show();
+                    setTimeout(function () {
+                        $upArrow.fadeIn();
+                    }, 2000);
                 });
-                if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
-                    bgMusic.play();
-                }
             })
         });
     });
