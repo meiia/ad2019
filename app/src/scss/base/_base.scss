@@ -43,7 +43,7 @@ body {
     display: none;
     z-index: 1;
 
-    margin-bottom: 0.7rem;    #modal-wrap {
+    #modal-wrap {
         position: absolute;
         height: 120px;
         width: 220px;
@@ -62,29 +62,30 @@ body {
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -54%);
 
             #modal-text {
                 margin: 0;
                 line-height: 1.4rem;
-                margin-bottom: 0.7rem;
+                margin-bottom: 0.4rem;
             }
 
             .modal-btn {
-                padding: 1px 10px;
                 display: none;
+                height: 28px;
+                line-height: 28px;
                 background-image: url('../images/modal_btn.png');
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
             }
 
-            // #modal-save {
-                
-            // }
+            #modal-save {
+                padding: 3px 10px;
+            }
 
             #modal-change {
                 background-image: url('../images/modal_btn1.png');
-                padding: 1px 18px;
+                padding: 3px 18px;
             }
 
         }

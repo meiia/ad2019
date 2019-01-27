@@ -170,8 +170,8 @@
             var qrcode = new Image();
             qrcode.src = '../images/qrcode_02.png';
 
-            // $.getJSON('http://47.101.222.238/search', {
-            $.getJSON('./search', {
+            $.getJSON('http://47.101.222.238/search', {
+            // $.getJSON('./search', {
                 name: decodeURI(name),
                 sex: sex,
                 birthday: birthday,
@@ -251,8 +251,9 @@
         $('.loading-text').hide();
         $('.loaded-text').show();
         $('.loading-overlay').click(function () {
-            $('.slide-1 .item-text').show();
-            $('.loading-overlay').slideUp();
+            $('.loading-overlay').slideUp(function () {
+                $('.slide-1 .item-text').show();
+            });
             if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
                 bgMusic.play();
             }
