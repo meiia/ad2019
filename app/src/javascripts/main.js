@@ -6,6 +6,7 @@
     // var reposition = require('./reposition.js');
     var draw = require('./draw.js');
     var message = require('./message.js');
+    var loadImg = require('./loadImg.js');
     // var mobiscroll = require('@mobiscroll/jquery-lite');
     // console.log(mobiscroll)
     // mobiscroll.settings = {
@@ -155,11 +156,13 @@
 
         // Submit
         $('#submit').click(function () {
-            var name = encodeURI($('#name').val());
+            var name = encodeURI($('#name').val().trim());
             var sex = $('#sex').val();
             var birthday = $('#birthdayselect').val();
             if (name == '') {
                 return message('请输入姓名');
+            } else if (name.length > 5) {
+                return message('姓名不能超过5个字，<br />请重新输入');
             } else if (sex == '') {
                 return message('请选择性别');
             } else if (birthday == '') {
@@ -244,19 +247,24 @@
         });
 
         $('#sharebtn').click(function () {
-            message('长按保存图片，<br/>分享好运好朋友圈吧！');
+            message('长按保存图片，<br/>将好运分享出去吧！');
         });
 
         // hide loading animation since everything is ready
-        $('.loading-text').hide();
-        $('.loaded-text').show();
-        $('.loading-overlay').click(function () {
-            $('.loading-overlay').slideUp(function () {
-                $('.slide-1 .item-text').show();
-            });
-            if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
-                bgMusic.play();
-            }
-        })
+        loadImg([
+            '../images/01_light.png',
+            '../images/01_bg.png',
+        ], function () {
+            $('.loading-text').hide();
+            $('.loaded-text').show();
+            $('.loading-overlay').click(function () {
+                $('.loading-overlay').slideUp(function () {
+                    $('.slide-1 .item-text').show();
+                });
+                if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
+                    bgMusic.play();
+                }
+            })
+        });
     });
 })();
