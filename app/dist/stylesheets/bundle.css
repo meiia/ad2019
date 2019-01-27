@@ -5150,9 +5150,10 @@ body {
 .slide-2 .item-image-3 .item-image-3-tips {
   position: absolute;
   top: 35%;
-  left: 40%;
-  color: #fff;
+  left: 41%;
+  color: #fefcf6;
   margin: 0;
+  font-size: 14px;
 }
 
 .slide-2 .item-image-3 .item-image-3-blink {
