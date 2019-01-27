@@ -131,19 +131,20 @@
         // $('#birthday').mobiscroll().date();
 
         // When click the age input, turn it to a date type input.
-        $('#birthdayinput').click(function (e) {
+        $('#birthdayselect').click(function (e) {
             e.preventDefault();
-            $('#birthdayinput').hide();
-            $('#birthdayselect').show();
-            // $('#birthdayselect').click();
-            $('#birthdayselect').focus();
+            // $('#birthdayinput').hide();
+            // $('#birthdayselect').show();
+            // // $('#birthdayselect').click();
+            // $('#birthdayselect').focus();
+            $('#birthdayselect').css('opacity', 1);
         })
         $('input, select').blur(function () {
-            if ($(this) === $('#birthdayselect')) {
-                $('#birthdayinput').val($('#birthdayselect').val());
-                $('#birthdayinput').show();
-                $('#birthdayselect').hide();
-            }
+            // if ($(this) === $('#birthdayselect')) {
+            //     $('#birthdayinput').val($('#birthdayselect').val());
+            //     $('#birthdayinput').show();
+            //     $('#birthdayselect').hide();
+            // }
             document.body.scrollTop = 0;
         })
         $('#sex').change(function () {

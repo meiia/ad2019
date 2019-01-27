@@ -5357,8 +5357,15 @@ body {
   color: #f7f397;
 }
 
-.slide-4 #birthdayselect {
-  display: none;
+.slide-4 .birthday {
+  position: relative;
+}
+
+.slide-4 .birthday #birthdayselect {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .slide-4 .item-btn {
