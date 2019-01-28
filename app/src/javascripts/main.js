@@ -1,6 +1,8 @@
 (function () {
     // 'use strict';
 
+    // wechat config
+
     // load dependencies
     var animationControl = require('./animation-control.js');
     var draw = require('./draw.js');
