@@ -13,7 +13,7 @@
         var $upArrow = $('.up-arrow');
         // var $enterJinjaBtn = $('#enterJinja');
         var $enterForm = $('#enterForm');
-        var resultHistory = [];
+        var resultHistory = '';
 
         // reset swiper-container height and width
         $('.swiper-container').css({
@@ -129,7 +129,7 @@
                 name: decodeURI(name),
                 sex: sex,
                 birthday: birthday,
-                history: resultHistory.join(',')
+                history: resultHistory
             }, function (res) {
                 if (res.status == 200) {
                     var d = function (img) {
@@ -149,11 +149,8 @@
                     var imageYes = false;
                     var hasShown = false;
                     var img = new Image();
+                    resultHistory = res.data.history;
 
-                    if (resultHistory.length >= 21) {
-                        resultHistory = [];
-                    }
-                    resultHistory.push(res.data.result);
                     img.src = '../images/' + res.data.result + '.jpg';
                     img.onload = function () {
                         imageYes = true;
