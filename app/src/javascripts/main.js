@@ -150,7 +150,7 @@
                     var hasShown = false;
                     var img = new Image();
 
-                    if (resultHistory.length >= 22) {
+                    if (resultHistory.length >= 21) {
                         resultHistory = [];
                     }
                     resultHistory.push(res.data.result);
