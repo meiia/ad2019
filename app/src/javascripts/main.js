@@ -10,7 +10,8 @@
     var utils = require('./utils');
     var loadImg = utils.loadImg;
     var checkLength = utils.checkLength;
-
+    var getUrlParam = utils.getUrlParam;
+    console.log(getUrlParam('sign'))
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
         var $btnMusic = $('.btn-music');
@@ -126,7 +127,11 @@
             $('.drawing').show();
 
             var qrcode = new Image();
-            qrcode.src = '../images/qrcode_02.png';
+            if (getUrlParam('sign') === 'meiia') {
+                qrcode.src = '../images/qrcode_meiia.png';
+            } else {
+                qrcode.src = '../images/qrcode_02.png';
+            }
 
             // $.getJSON('http://47.101.222.238/search', {
             $.getJSON('./search', {
