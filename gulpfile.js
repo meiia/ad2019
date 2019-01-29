@@ -59,6 +59,12 @@ gulp.task('publish-audios', function () {
         .pipe(gulp.dest('app/dist/audios'));
 });
 
+// copy txt
+gulp.task('publish-txt', function () {
+    return gulp.src('app/src/*.txt')
+        .pipe(gulp.dest('app/dist/'));
+});
+
 // compile sass, concat stylesheets in the right order,
 // and save as app/dist/stylesheets/bundle.css
 gulp.task('publish-css', function () {
@@ -133,6 +139,7 @@ gulp.task('watch', function () {
     gulp.watch('app/src/fonts/**/*', ['publish-fonts']);
     gulp.watch('app/src/images/**/*', ['publish-images']);
     gulp.watch('app/src/audios/**/*', ['publish-audios']);
+    gulp.watch('app/src/audios/**/*', ['publish-txt']);
 
     gulp.watch('app/dist/index.html').on('change', browserSync.reload);
     gulp.watch('app/dist/javascripts/*').on('change', browserSync.reload);
@@ -154,7 +161,7 @@ gulp.task('clean-files', function(cb) {
 
 // development workflow task
 gulp.task('dev', function (cb) {
-    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
+    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-txt', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
 });
 
 // default task
