@@ -14,7 +14,6 @@ var loadImg = function (arr, callback) {
 }
 
 var checkLength = function(value, maxLength) {
-  console.log(value)
   var txtLength = 0;
   for (var i = 0; i < value.length; i++) {
     if (/[\u4e00-\u9fa5]/.test(value[i])) { //通过正则表达式来识别汉字,每个汉字占两个字符
@@ -22,7 +21,6 @@ var checkLength = function(value, maxLength) {
     } else {
       txtLength ++;
     }
-    console.log(txtLength)
     if (txtLength > maxLength) {
       value = value.substr(0, i);
       // alert("以达到最大输入值:"+maxLength+"个字符或"+maxLength/2+"个汉字!");
