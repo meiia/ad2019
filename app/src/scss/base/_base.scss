@@ -66,8 +66,7 @@ body {
 
             #modal-text {
                 margin: 0;
-                line-height: 1.4rem;
-                margin-bottom: 0.4rem;
+                line-height: 1.8rem;
             }
 
             .modal-btn {
@@ -88,6 +87,17 @@ body {
                 padding: 3px 18px;
             }
 
+        }
+    }
+
+    &.modal-hasbtn {
+        #modal-wrap {
+            #modal-content {
+                #modal-text {
+                    line-height: 1.4rem;
+                    margin-bottom: 0.4rem;
+                }
+            }
         }
     }
 }

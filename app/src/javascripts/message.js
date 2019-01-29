@@ -12,8 +12,10 @@ module.exports = function (text, hasBtn) {
     $modal.show();
     if (hasBtn) {
         $('#modal .modal-btn').show();
+        $('#modal').addClass('modal-hasbtn');
         return;
     }
+    $('#modal').removeClass('modal-hasbtn');
     $('#modal .modal-btn').hide();
     setTimeout(function () {
         $modal.fadeOut(1000, function () {

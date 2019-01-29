@@ -5,7 +5,9 @@
     var animationControl = require('./animation-control.js');
     var draw = require('./draw.js');
     var message = require('./message.js');
-    var loadImg = require('./loadImg.js');
+    var utils = require('./utils');
+    var loadImg = utils.loadImg;
+    var checkLength = utils.checkLength;
 
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
@@ -104,16 +106,16 @@
                 $(this).css('color', '#f7f397');
             }
         })
-
         // Submit
         $('#submit').click(function () {
-            var name = encodeURI($('#name').val());
+            var name = $('#name').val().trim();
             var sex = $('#sex').val();
             var birthday = $('#birthdayselect').val();
             if (name == '') {
                 return message('请输入姓名');
             // } else if (name.length > 5) {
-                // return message('姓名不能超过5个字，<br />请重新输入');
+            } else if (!checkLength(name, 10)) {
+                return message('姓名不能超过5个汉字<br />或10个字母，请重新输入');
             } else if (sex == '') {
                 return message('请选择性别');
             } else if (birthday == '') {
@@ -126,11 +128,23 @@
 
             // $.getJSON('http://47.101.222.238/search', {
             $.getJSON('./search', {
-                name: decodeURI(name),
+                name: name,
                 sex: sex,
                 birthday: birthday,
                 history: resultHistory
             }, function (res) {
+                // var res = {
+                //     "status": 200,
+                //     "data": {
+                //     "result": 1,
+                //     "name": "我们",
+                //     "color": "#2044ae",
+                //     "text1": "在Adobe之神的庇护下",
+                //     "text2": "工作更加得心应手，并获得",
+                //     "text3": "每3稿出现1次1稿过的隐藏技能！",
+                //     "history": "1"
+                //     }
+                // }
                 if (res.status == 200) {
                     var d = function (img) {
                         $('.drawing').hide();
