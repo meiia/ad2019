@@ -1,33 +1,13 @@
-# wechat-h5-boilerplate
-
-> 「让制作H5像制作PPT一样简单！」
-
-Wechat-H5-Boilerplate(以下简称WHB）是一个H5动效模板，专门为微信优化，适合快速构建全屏滚动型H5宣传页。
-
-![效果图][1]
-
-例如让一段文字动起来只需要一行代码：
-
-    <p class="animated" data-ani-name="slideInRight" data-ani-duration="1s" data-ani-delay="0.3s">I'm a coder!</p>
-
+# ad2019 front end codes
 
 ## 目录
 
- - [实时预览](#实时预览)
  - [依赖列表](#依赖列表)
  - [项目结构](#项目结构)
  - [开发流程](#开发流程)
  - [发布流程](#发布流程)
  - [开发指南](#开发指南)
  - [待办事项](#待办事项)
-
-## 实时预览
-
-**使用手机**访问下面的地址或扫描下方二维码
-
-[https://panteng.github.io/wechat-h5-boilerplate/][2]
-
-![此处输入图片的描述][3]
 
 ## 依赖列表
 1. [Swiper][4] --> 用于实现页面的整屏滚动
@@ -65,10 +45,9 @@ Wechat-H5-Boilerplate(以下简称WHB）是一个H5动效模板，专门为微�
 
     在控制台中运行：
 
-        git clone --depth=1 https://github.com/panteng/wechat-h5-boilerplate.git <your-project-name>
+        git clone --depth=1 https://github.com/meiia/ad2019.git <your-project-name>
         cd <your-project-name>
         
-    或者你也可以直接在[Release](https://github.com/panteng/wechat-h5-boilerplate/releases)页面下载WHB的源码压缩包。
 
 2. **安装第三方包**
 
