@@ -11,6 +11,7 @@ module.exports = {
     javascripts: [
         'node_modules/jquery/dist/jquery.js',
         'node_modules/swiper/dist/js/swiper.jquery.umd.js',
+        'node_modules/js-md5/build/md5.min.js',
         // 'javascripts/jweixin-1.4.0.js',
         // 'node_modules/jquery-lite/dist/js/mobiscroll.jquery.min.js',
     ],

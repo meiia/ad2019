@@ -8,10 +8,12 @@
     var draw = require('./draw.js');
     var message = require('./message.js');
     var utils = require('./utils');
+    var mock = require('./mock.js');
     var loadImg = utils.loadImg;
     var checkLength = utils.checkLength;
     var getUrlParam = utils.getUrlParam;
-    console.log(getUrlParam('sign'))
+
+
     $(document).ready(function () {
         var bgMusic = $('audio').get(0);
         var $btnMusic = $('.btn-music');
@@ -134,12 +136,12 @@
             }
 
             // $.getJSON('http://47.101.222.238/search', {
-            $.getJSON('./search', {
-                name: name,
-                sex: sex,
-                birthday: birthday,
-                history: resultHistory
-            }, function (res) {
+            // $.getJSON('./search', {
+            //     name: name,
+            //     sex: sex,
+            //     birthday: birthday,
+            //     history: resultHistory
+            // }, function (res) {
                 // var res = {
                 //     "status": 200,
                 //     "data": {
@@ -152,6 +154,12 @@
                 //     "history": "1"
                 //     }
                 // }
+                var res = mock({
+                    name: name,
+                    sex: sex,
+                    birthday: birthday,
+                    history: resultHistory
+                });
                 if (res.status == 200) {
                     var d = function (img) {
                         $('.drawing').hide();
@@ -190,7 +198,7 @@
                 } else {
                     message(data.message);
                 }
-            });
+            // });
         });
 
         $('#replaybtn').click(function () {
