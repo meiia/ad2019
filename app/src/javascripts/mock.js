@@ -39,7 +39,6 @@ var filterHistory = function (answers, history) {
 }
 
 var search = function (config) {
-  console.log(config, 'req')
   // 初始化数据，变成字符串
   var name = config.name + '';
   var sex = config.sex + '';
@@ -64,7 +63,6 @@ var search = function (config) {
   } else {
     res.data.history = history.join(',')
   }
-  console.log(res,'res');
   return res;
 }
 
