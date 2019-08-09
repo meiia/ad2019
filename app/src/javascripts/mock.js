@@ -15,7 +15,7 @@ var ALLANSWERS = [
   {color: "#a10266", result: 13, title: "尾款收割机", src: "images/13.jpg", text1: "", text2: "从今往后你的每一次项目尾款", text3: "都会在第一时间转到银行账户上！"},
   {color: "#78220b", result: 14, title: "发量暴增", src: "images/14.jpg", text1: "", text2: "不用再怕熬夜改稿发量少", text3: "从此一抓一大把的不是头发是钞票！"},
   {color: "#06331e", result: 15, title: "甲方筛选器", src: "images/15.jpg", text1: "", text2: "将自动屏蔽各种企图占便宜的甲方", text3: "接优质私单赚钱赚到手软！"},
-  {color: "#0d6ed5", result: 16, title: "成功暴瘦【女】", src: "images/16.jpg", text1: "", text2: "身材自带液化效果", text3: "A4腰、马甲线，分分钟迷倒众生！"},
+  {color: "#0d6ed5", result: 16, title: "成功暴瘦", src: "images/16.jpg", text1: "", text2: "身材自带液化效果", text3: "A4腰、马甲线，分分钟迷倒众生！"},
   {color: "#2044ae", result: 17, title: "完美拍档", src: "images/17.jpg", text1: "", text2: "任何高难度作图需求都能被", text3: "轻松实现，争吵摩擦将不复存在！"},
   {color: "#4e0e80", result: 18, title: "花开二度", src: "images/18.jpg", text1: "", text2: "一度枯萎的塑料同事情将", text3: "再度绽放，重回亲密无间的好时光！"},
   {color: "#603100", result: 19, title: "思维透视", src: "images/19.jpg", text1: "", text2: "获得能洞察甲方思维的隐藏技能", text3: "作品一稿通过率直线攀升！"},
