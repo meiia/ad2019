@@ -53,6 +53,7 @@ var search = function (config) {
     status: 200,
     data: ALLANSWERS[results[result] - 1]
   };
+  res.data.name = name;
   res.data.text1 = '在Adobe之神的庇护下';
 
   // 把新生成的结果加入到 history 中并返回
